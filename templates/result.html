@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Churn Prediction Result</title>
+    <!-- Add Bootstrap CSS link -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='CSS/rstyle.css') }}">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center">Churn Prediction Result</h1>
+        <div class="row mt-4">
+            <div class="col-md-6 offset-md-3">
+                <div class="result-container">
+                    <div class="result-content">
+                        {% if churn_result_message == "The customer is Exited." %}
+                            <h3 class="text-danger">{{ churn_result_message }}</h3>
+                        {% else %}
+                            <h3 class="text-success">{{ churn_result_message }}</h3>
+                        {% endif %}
+                    </div>
+                    <div class="text-center"> <!-- Center the "Go Back" button -->
+                        <a href="/" class="btn btn-back">Go Back</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add Bootstrap JS and jQuery scripts (required for Bootstrap components) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

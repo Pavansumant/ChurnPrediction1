@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Churn Prediction Form</title>
+    <!-- Add Bootstrap CSS link -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='CSS/hstyle.css') }}">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center">Churn Prediction Form</h1>
+        <div class="form-container mt-4">
+            <form action="/" method="post">
+                <div class="row">
+                    <div class="col-md-6 form-group">
+                        <label for="credit">Credit Score</label>
+                        <input type="number" class="form-control" id="credit" name="credit" placeholder="Enter Credit Score " required min="0" max="1000">
+                    </div>
+                    <div class="col-md-6 form-group">
+                        <label for="Geography">Geography</label>
+                        <select class="form-control" id="Geography" name="Geography">
+                            <option value="none" selected disabled hidden>Select an Option</option>
+                            <option value="Germany">Germany</option>
+                            <option value="Spain">Spain</option>
+                            <option value="France">France</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 form-group">
+                        <label for="Gender">Gender</label>
+                        <select class="form-control" id="Gender" name="Gender">
+                            <option value="none" selected disabled hidden>Select an Option</option>
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                        </select>
+                    </div>
+                    <div class="col-md-6 form-group">
+                        <label for="age">Age</label>
+                        <input type="number" class="form-control" id="age" name="age" placeholder="Enter Age" required min="0" max="120">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 form-group">
+                        <label for="Tenure">Tenure</label>
+                        <input type="number" class="form-control" id="Tenure" name="Tenure" placeholder="Enter Tenure " required min="0" max="11">
+                    </div>
+                    <div class="col-md-6 form-group">
+                        <label for="Balance">Balance</label>
+                        <input type="number" step="0.01" class="form-control" id="Balance" name="Balance" placeholder="Enter Balance" required min="0" max="9999999">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 form-group">
+                        <label for="nop">Number Of Products</label>
+                        <input type="number" class="form-control" id="nop" name="nop" placeholder="Enter Number of Products" min="0" max="9">
+                    </div>
+                    <div class="col-md-6 form-group">
+                        <label for="creditcard">Credit card</label>
+                        <select class="form-control" id="creditcard" name="creditcard">
+                            <option value="none" selected disabled hidden>Select an Option</option>
+                            <option value="Yes">Yes</option>
+                            <option value="No">No</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 form-group">
+                        <label for="isactive">Active Member</label>
+                        <select class="form-control" id="isactive" name="isactive">
+                            <option value="none" selected disabled hidden>Select an Option</option>
+                            <option value="Yes">Yes</option>
+                            <option value="No">No</option>
+                        </select>
+                    </div>
+                    <div class="col-md-6 form-group">
+                        <label for="estimated-salary">Estimated Salary</label>
+                        <input type="number" step="0.01" class="form-control" id="estimated-salary" name="estimated_salary" placeholder="Enter Salary" required min="0" max="99999999">
+                    </div>
+                </div>
+                <div style="display: flex; justify-content: center;">
+                    <button type="submit" class="btn btn-primary btn-predict">Predict</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Add Bootstrap JS and jQuery scripts (required for Bootstrap components) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
