@@ -1,0 +1,42 @@
+        body {
+            background-color: #e6ffe6;
+        }
+        /* Custom styles for the form container */
+        .form-container {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-left: auto; /* Add equal margin to the left and right sides */
+            margin-right: 20px;
+            border: 1px solid #1a237e; /* Add equal margin to the left and right sides */
+        }
+        /* Space between form elements */
+        .form-container .form-group {
+            margin-bottom: 20px;
+        }
+        /* Custom style for the Predict button */
+        .form-container .btn-predict {
+            margin-top: 20px;
+            margin-right: 10px;
+        }
+        /* Custom style for the labels */
+        label {
+            color: #1a237e;
+            font-weight: bold;
+        }
+        /* Custom style for the input fields and dropdowns */
+        input.form-control, select.form-control {
+            margin-left: 10px;
+            border-color: #1a237e;
+            outline-color: #1a237e;
+            color: #1a237e; /* Brighten the input values */
+        }
+        /* Custom style for the selected option in dropdown */
+        select.form-control option:checked {
+            background-color: #1a237e;
+            color: #ffffff;
+        }
+        input.form-control:focus, select.form-control:focus {
+            color: #000000; /* Black color for focused input values */
+        }
